@@ -1,30 +1,23 @@
 import React from "react";
 import {
   HeartPulse,
-  Activity,
   ShieldCheck,
   FileText,
   ArrowRight,
   Send,
-  CheckCircle2,
-  BadgeCheck,
-  Award,
-  Zap,
-  Radio,
-  Stethoscope,
-  QrCode
+  Stethoscope
 } from "lucide-react";
-import { COMPANY_INFO } from "../data/products";
+import { COMPANY_INFO, HERO_COPY } from "../data/products";
 import { buildWhatsAppQuoteUrl } from "../utils/whatsapp";
 
 export default function HeroSection({ onOpenQuote, onOpenPdfModal, onNavigate }) {
   const handleHeroWhatsApp = () => {
     const url = buildWhatsAppQuoteUrl({
-      name: "Dotación Hospitalaria Integral / Espacio Cardioprotegido",
+      name: "Dotación Biomédica y Cardioprotección",
       sku: "HERO-CONSULTA",
       brand: "CliniK Soluciones",
-      category: "Asesoría Integral",
-      modality: "Equipamiento Completo"
+      category: "Asesoría Integral (Res. 3100 / Res. 3316)",
+      modality: "Venta Directa B2B"
     });
     window.open(url, "_blank");
   };
@@ -39,26 +32,26 @@ export default function HeroSection({ onOpenQuote, onOpenPdfModal, onNavigate })
         {/* LAYOUT SPLIT HERO ASIMÉTRICO (60% IZQUIERDA / 40% DERECHA) */}
         <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-center">
           {/* ========================================================
-              COLUMNA IZQUIERDA: VALOR DIRECTO & CONCISO (SIN RELLENO)
+              COLUMNA IZQUIERDA: TEXTO APROBADO EN DOCUMENTO OFICIAL
              ======================================================== */}
           <div className="lg:col-span-7 text-left">
             {/* BADGE DE AUTORIDAD */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/95 dark:bg-slate-900/95 border border-teal-200 dark:border-teal-800/60 shadow-2xs text-[11px] font-bold text-[#00758D] dark:text-[#6BCDB2] mb-4">
               <ShieldCheck className="w-3.5 h-3.5 text-[#69a53c]" />
-              <span>Ingeniería Biomédica B2B • NIT {COMPANY_INFO.nit}</span>
+              <span>{HERO_COPY.badge} • NIT {COMPANY_INFO.nit}</span>
             </div>
 
-            {/* TITULAR PRINCIPAL CONCISO */}
+            {/* TITULAR PRINCIPAL EXACTO: "Dotación Biomédica y Cardioprotección" */}
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.15] mb-4">
-              Dotación Biomédica &{" "}
+              {HERO_COPY.titlePrefix}{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#00758D] via-[#009bb8] to-[#69a53c]">
-                Cardioprotección
+                {HERO_COPY.titleHighlight}
               </span>
             </h1>
 
-            {/* SUBTÍTULO RESUMIDO SIN RELLENO */}
-            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-6 max-w-xl">
-              Tecnología médica certificada con <strong>registro INVIMA vigente</strong>, metrología hospitalaria <strong>Res. 3100</strong> e implementación integral de la <strong>Ley 1831 de 2017</strong>.
+            {/* SUBTÍTULO LITERAL DE AJUSTES PAG CLINIK.DOCX */}
+            <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed mb-6 max-w-2xl">
+              {HERO_COPY.subtitle}
             </p>
 
             {/* BOTONES DE ACCIÓN RÁPIDA */}
@@ -89,32 +82,37 @@ export default function HeroSection({ onOpenQuote, onOpenPdfModal, onNavigate })
               </button>
             </div>
 
-            {/* 4 PÍLDORAS CLAVE RESUMIDAS */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 pt-4 border-t border-slate-200/80 dark:border-slate-800 text-center">
-              <div className="p-2 rounded-xl bg-white/80 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800">
-                <span className="text-[9px] font-bold text-slate-400 uppercase block">Habilitación</span>
-                <span className="text-xs font-extrabold text-[#00758D] dark:text-[#6BCDB2]">Res. 3100</span>
-              </div>
-              <div className="p-2 rounded-xl bg-white/80 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800">
-                <span className="text-[9px] font-bold text-slate-400 uppercase block">Cardioprotegidos</span>
-                <span className="text-xs font-extrabold text-rose-600 dark:text-rose-400">Ley 1831</span>
-              </div>
-              <div className="p-2 rounded-xl bg-white/80 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800">
-                <span className="text-[9px] font-bold text-slate-400 uppercase block">Metrología</span>
-                <span className="text-xs font-extrabold text-[#69a53c]">ISO 17025</span>
-              </div>
-              <div className="p-2 rounded-xl bg-white/80 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800">
-                <span className="text-[9px] font-bold text-slate-400 uppercase block">Trayectoria</span>
-                <span className="text-xs font-extrabold text-slate-900 dark:text-white">Desde 2017</span>
-              </div>
+            {/* 4 PÍLDORAS CLAVE DEFINIDAS EN EL DOCUMENTO */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-4 border-t border-slate-200/80 dark:border-slate-800 text-center">
+              {HERO_COPY.pills.map((pill, idx) => {
+                const valueColors = [
+                  "text-slate-900 dark:text-white",
+                  "text-[#00758D] dark:text-[#6BCDB2]",
+                  "text-[#69a53c]",
+                  "text-teal-700 dark:text-teal-300"
+                ];
+                return (
+                  <div
+                    key={idx}
+                    className="p-2.5 rounded-xl bg-white/85 dark:bg-slate-900/60 border border-slate-200/60 dark:border-slate-800"
+                  >
+                    <span className="text-[9px] font-bold text-slate-400 uppercase block tracking-wider">
+                      {pill.label}
+                    </span>
+                    <span className={`text-xs font-extrabold ${valueColors[idx % valueColors.length]}`}>
+                      {pill.value}
+                    </span>
+                  </div>
+                );
+              })}
             </div>
           </div>
 
           {/* ========================================================
-              COLUMNA DERECHA: BENTO SHOWCASE CON IMAGEN REAL
+              COLUMNA DERECHA: TARJETA ESPACIO CARDIOPROTEGIDO & TELEMETRÍA
              ======================================================== */}
           <div className="lg:col-span-5 space-y-3.5">
-            {/* CARD 1: PRODUCTO ESTRELLA - LEY 1831 */}
+            {/* CARD 1: ESPACIO CARDIOPROTEGIDO - RESOLUCIÓN 3316 DE 2019 */}
             <div className="p-4 sm:p-5 rounded-2xl bg-white/95 dark:bg-slate-900/95 border border-teal-100 dark:border-slate-800 shadow-xs card-hover-tilt">
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-center gap-1.5">
@@ -122,39 +120,36 @@ export default function HeroSection({ onOpenQuote, onOpenPdfModal, onNavigate })
                     <HeartPulse className="w-3.5 h-3.5 animate-pulse" />
                   </span>
                   <span className="text-[10px] font-bold uppercase tracking-wider text-rose-600 dark:text-rose-400">
-                    Ley 1831 de 2017
+                    {HERO_COPY.featuredCard.normBadge}
                   </span>
                 </div>
                 <span className="text-[9px] font-mono text-emerald-600 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded font-bold">
-                  Autotest Diario
+                  {HERO_COPY.featuredCard.statusBadge}
                 </span>
               </div>
 
               <div className="flex items-center gap-3 mb-2.5">
                 <img
-                  src="./images/products/dea-i7-plus.png"
-                  alt="DEA i7 Plus AMOUL"
+                  src={HERO_COPY.featuredCard.image}
+                  alt={HERO_COPY.featuredCard.title}
                   className="w-14 h-14 object-contain bg-slate-50 dark:bg-slate-800/80 rounded-xl p-1 border border-slate-200/60 dark:border-slate-700/60 shrink-0"
                 />
                 <div>
                   <h4 className="font-extrabold text-slate-900 dark:text-white text-xs sm:text-sm leading-tight mb-1">
-                    Espacio Cardioprotegido Llave en Mano
+                    {HERO_COPY.featuredCard.title}
                   </h4>
                   <p className="text-[11px] text-slate-500 dark:text-slate-400 leading-snug">
-                    DEA bifásico, gabinete con alarma, capacitación BLS y habilitación.
+                    {HERO_COPY.featuredCard.description}
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center justify-between pt-2 border-t border-slate-100 dark:border-slate-800 text-[11px]">
-                <span className="text-emerald-600 dark:text-emerald-400 font-bold flex items-center gap-1">
-                  <CheckCircle2 className="w-3.5 h-3.5" /> Radicación SSSA
-                </span>
+              <div className="flex items-center justify-end pt-2 border-t border-slate-100 dark:border-slate-800 text-[11px]">
                 <button
                   onClick={() => onNavigate ? onNavigate("cardioprotegidos") : (window.location.hash = "#cardioprotegidos")}
                   className="text-[#00758D] dark:text-[#6BCDB2] font-bold hover:underline flex items-center gap-1 text-[11px] cursor-pointer"
                 >
-                  <span>Ver Solución</span>
+                  <span>{HERO_COPY.featuredCard.ctaLabel}</span>
                   <ArrowRight className="w-3 h-3" />
                 </button>
               </div>
@@ -165,10 +160,10 @@ export default function HeroSection({ onOpenQuote, onOpenPdfModal, onNavigate })
               <div className="flex items-center justify-between mb-1.5">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-[#00758D] dark:text-[#6BCDB2] flex items-center gap-1.5">
                   <span className="w-2 h-2 rounded-full bg-[#69a53c] animate-ping"></span>
-                  Telemetría UCI & Urgencias
+                  Telemetría UCI y Urgencias
                 </span>
                 <span className="text-[10px] font-mono text-slate-400">
-                  EDAN iM20 / X8
+                  EDAN iM70 / X12
                 </span>
               </div>
 

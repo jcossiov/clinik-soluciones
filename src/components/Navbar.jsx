@@ -6,14 +6,15 @@ import {
   Activity,
   Sun,
   Moon,
-  Send,
   Menu,
   X,
   ShieldCheck,
   Lock,
   PhoneCall,
-  MessageSquare
+  MessageSquare,
+  Mail
 } from "lucide-react";
+import { COMPANY_INFO } from "../data/products";
 import { buildWhatsAppQuoteUrl } from "../utils/whatsapp";
 
 export default function Navbar({
@@ -30,19 +31,19 @@ export default function Navbar({
   const navWindows = [
     { id: "inicio", label: "Inicio" },
     { id: "catalogo", label: "Catálogo", icon: Stethoscope },
-    { id: "cardioprotegidos", label: "Cardioprotegidos", icon: HeartPulse },
+    { id: "cardioprotegidos", label: "Cardioprotección", icon: HeartPulse },
     { id: "ambulancias", label: "Ambulancias", icon: Truck },
-    { id: "servicios", label: "Servicios & Metrología", icon: Activity },
+    { id: "servicios", label: "Servicios y Metrología", icon: Activity },
     { id: "clinikos", label: "CliniK OS", icon: Lock, isRestricted: true }
   ];
 
   const handleWhatsAppQuick = () => {
     const url = buildWhatsAppQuoteUrl({
-      name: "Consulta General sobre Equipamiento Biomédico",
+      name: "Consulta General sobre Equipamiento Biomédico y Cardioprotección",
       sku: "NAVBAR-QUICK",
       brand: "CliniK Soluciones",
       category: "Atención Inmediata",
-      modality: "Venta Directa / Renting"
+      modality: "Venta Directa B2B"
     });
     window.open(url, "_blank");
   };
@@ -61,21 +62,28 @@ export default function Navbar({
           <div className="flex items-center gap-2 sm:gap-3 text-teal-100 font-medium">
             <span className="flex items-center gap-1">
               <ShieldCheck className="w-3 h-3 text-[#6BCDB2]" />
-              <span>NIT 901.074.678-9 • Sabaneta, Antioquia</span>
+              <span>NIT {COMPANY_INFO.nit} • Sabaneta, Antioquia</span>
             </span>
             <span className="hidden md:inline text-teal-400/60">•</span>
             <span className="hidden md:inline text-teal-200">
-              Res. 3100 de 2019 / Ley 1831
+              Res. 3100 de 2019 / Res. 3316 de 2019
             </span>
           </div>
 
-          <div className="flex items-center gap-3 text-teal-100">
+          <div className="flex items-center gap-3 sm:gap-4 text-teal-100">
             <a
-              href="tel:+573002511994"
+              href={`mailto:${COMPANY_INFO.emailGeneral}`}
+              className="hidden sm:flex items-center gap-1 hover:text-white transition-colors"
+            >
+              <Mail className="w-3 h-3 text-[#6BCDB2]" />
+              <span className="font-mono text-[10px]">{COMPANY_INFO.emailGeneral}</span>
+            </a>
+            <a
+              href="tel:+573002511990"
               className="flex items-center gap-1 hover:text-white transition-colors"
             >
               <PhoneCall className="w-3 h-3 text-[#6BCDB2]" />
-              <span className="font-mono text-[10px]">PBX (+57) 300 251 1994</span>
+              <span className="font-mono text-[10px]">WhatsApp / Tel {COMPANY_INFO.phoneDisplay}</span>
             </a>
           </div>
         </div>
@@ -89,12 +97,12 @@ export default function Navbar({
           <button
             onClick={() => handleNavClick("inicio")}
             className="flex items-center cursor-pointer group py-1"
-            title="Clinik Soluciones - Volver al Inicio"
-            aria-label="Clinik Soluciones"
+            title="CliniK Soluciones - Volver al Inicio"
+            aria-label="CliniK Soluciones"
           >
             <img
               src="./images/clinik-logo-original.png"
-              alt="Clinik Soluciones"
+              alt="CliniK Soluciones"
               className="h-10 sm:h-11 w-auto max-w-[180px] sm:max-w-[220px] object-contain transition-transform duration-300 group-hover:scale-105 dark:brightness-110"
             />
           </button>
@@ -196,10 +204,10 @@ export default function Navbar({
             <div className="pt-2 border-t border-slate-100 dark:border-slate-800 flex gap-2">
               <button
                 onClick={handleWhatsAppQuick}
-                className="flex-1 flex items-center justify-center gap-2 bg-[#69a53c] text-white text-xs font-bold py-2.5 rounded-xl"
+                className="flex-1 flex items-center justify-center gap-2 bg-[#69a53c] text-white text-xs font-bold py-2.5 rounded-xl cursor-pointer"
               >
                 <MessageSquare className="w-4 h-4" />
-                <span>WhatsApp (+57 300 202 1894)</span>
+                <span>WhatsApp (+57 300 251 1990)</span>
               </button>
             </div>
           </div>

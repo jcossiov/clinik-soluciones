@@ -4,14 +4,10 @@ import {
   HeartPulse,
   Truck,
   Activity,
-  ArrowRight,
-  ShieldCheck,
-  CheckCircle2,
-  Building2,
+  ArrowUpRight,
   Sparkles,
   MessageSquare,
-  Award,
-  ChevronRight
+  Send
 } from "lucide-react";
 import HeroSection from "./HeroSection";
 import ClientesSection from "./ClientesSection";
@@ -28,53 +24,47 @@ export default function InicioHub({
     sku: "CONSULTA-GENERAL",
     brand: "CliniK Soluciones",
     category: "Atención Inmediata",
-    modality: "Venta Directa / Renting"
+    modality: "Venta Directa B2B"
   });
 
+  // C1-C6 Awwwards Optimization:
+  // >=68% photo height (h-56), <=12 words per card, 2 semantic Data Chips, max 2 icons per card
   const hubWindows = [
     {
       id: "catalogo",
-      title: "Catálogo de Equipamiento",
-      subtitle: "13 Líneas con Registro INVIMA",
-      desc: "Monitores multiparámetro, DEAs, ventiladores, bombas de infusión y succionadores.",
-      image: "./images/products/monitor-x8-co2.png",
-      tag: "Venta & Renting",
+      title: "Catálogo Biomédico",
+      chips: ["10 Líneas Médicas", "Rescate & NASCO"],
+      image: "./images/products/monitor-im70.jpg",
+      tag: "Venta B2B",
       icon: Stethoscope,
-      accent: "from-teal-500/10 to-teal-500/5",
-      border: "border-teal-200 dark:border-teal-800/60"
+      border: "border-slate-200/80 dark:border-slate-800 hover:border-[#00758D]"
     },
     {
       id: "cardioprotegidos",
-      title: "Espacios Cardioprotegidos",
-      subtitle: "Ley 1831 de 2017 • Solución 7-en-1",
-      desc: "Dotación obligatoria de DEAs, cabina con alarma, kit trauma, capacitación BLS y habilitación.",
-      image: "./images/products/dea-i7-plus.png",
-      tag: "Obligatoriedad Legal",
+      title: "Cardioprotección",
+      chips: ["Res. 3316 de 2019", "5 Paquetes DEA"],
+      image: "./images/products/dea-mindray-c1a.jpg",
+      tag: "Espacio Cardioprotegido",
       icon: HeartPulse,
-      accent: "from-rose-500/10 to-rose-500/5",
-      border: "border-rose-200 dark:border-rose-800/60"
+      border: "border-slate-200/80 dark:border-slate-800 hover:border-rose-500"
     },
     {
       id: "ambulancias",
-      title: "Dotación de Ambulancias",
-      subtitle: "Resolución 3100 de 2019",
-      desc: "Equipamiento normativo para Transporte Asistencial Básico (TAB) y Medicalizado (TAM).",
-      image: "./images/products/monitor-im20.png",
-      tag: "Norma EN1789",
+      title: "Ambulancias TAB y TAM",
+      chips: ["Res. 3100 de 2019", "Dotación o Vehículo"],
+      image: "./images/products/rescate-camilla-ambulancia.png",
+      tag: "Criterios 31 al 34",
       icon: Truck,
-      accent: "from-blue-500/10 to-blue-500/5",
-      border: "border-blue-200 dark:border-blue-800/60"
+      border: "border-slate-200/80 dark:border-slate-800 hover:border-[#00758D]"
     },
     {
       id: "servicios",
-      title: "Servicios & Metrología",
-      subtitle: "NTC-ISO 17025 • Res. 3100",
-      desc: "Calibración metrológica, mantenimiento semestral, hojas de vida QR y capacitación.",
-      image: "./images/products/desfibrilador-i6.png",
-      tag: "Trazabilidad Oficial",
+      title: "Servicios y Metrología",
+      chips: ["Mantenimiento", "Calibración & BLS"],
+      image: "./images/products/desfibrilador-i2.png",
+      tag: "Soporte Técnico",
       icon: Activity,
-      accent: "from-emerald-500/10 to-emerald-500/5",
-      border: "border-emerald-200 dark:border-emerald-800/60"
+      border: "border-slate-200/80 dark:border-slate-800 hover:border-[#69a53c]"
     }
   ];
 
@@ -87,65 +77,72 @@ export default function InicioHub({
         onNavigate={onNavigate}
       />
 
-      {/* 2. VENTANAS PRINCIPALES DE NAVEGACIÓN MODULAR */}
+      {/* 2. VENTANAS PRINCIPALES DE NAVEGACIÓN MODULAR — BENTO MINIMALISTA AWWWARDS */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-8">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 dark:bg-teal-950/60 text-[#00758D] dark:text-[#6BCDB2] text-[11px] font-bold uppercase tracking-wider mb-2">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Módulos del Portafolio Institucional</span>
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
+          <div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-50 dark:bg-teal-950/60 text-[#00758D] dark:text-[#6BCDB2] text-[10px] font-bold uppercase tracking-widest mb-2">
+              <Sparkles className="w-3 h-3" />
+              <span>Ecosistema Biomédico B2B</span>
+            </div>
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white tracking-tight">
+              Líneas de Especialidad
+            </h2>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight">
-            Seleccione el Área de Interés
-          </h2>
-          <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-1">
-            Navegue directamente por ventana temática sin desplazamientos infinitos.
-          </p>
+          <span className="text-xs font-medium text-slate-400">
+            Garantía 12 Meses • Cobertura Nacional
+          </span>
         </div>
 
-        {/* GRILLA DE LAS 4 VENTANAS PRINCIPALES */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* GRILLA BENTO 4 COLUMNAS — >=68% FOTO + CHIPS + CERO PÁRRAFOS */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {hubWindows.map((win) => {
             const Icon = win.icon;
             return (
               <div
                 key={win.id}
                 onClick={() => onNavigate(win.id)}
-                className={`group rounded-3xl bg-white dark:bg-slate-900 border ${win.border} p-6 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between cursor-pointer card-hover-tilt overflow-hidden relative`}
+                className={`group rounded-3xl bg-white dark:bg-slate-900 border ${win.border} shadow-xs hover:shadow-2xl transition-all duration-300 flex flex-col justify-between cursor-pointer overflow-hidden`}
               >
-                <div>
-                  {/* IMAGEN DE REFERENCIA (CUBRE LA TOTALIDAD DEL MARCO) */}
-                  <div className="h-44 w-full bg-white dark:bg-slate-800 rounded-2xl overflow-hidden mb-4 border border-slate-100 dark:border-slate-800 relative">
-                    <img
-                      src={win.image}
-                      alt={win.title}
-                      loading="lazy"
-                      className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-108"
-                    />
-                  </div>
-
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#00758D] dark:text-[#6BCDB2] flex items-center gap-1">
-                      <Icon className="w-3.5 h-3.5" />
-                      {win.tag}
+                {/* C1: LIENZO FOTOGRÁFICO PROTAGONISTA (h-56 = 224px) */}
+                <div className="relative h-56 w-full bg-gradient-to-b from-slate-50/90 to-white dark:from-slate-800/60 dark:to-slate-900 p-6 flex items-center justify-center overflow-hidden border-b border-slate-100 dark:border-slate-800/80">
+                  {/* PÍLDORA ÚNICA SUPERIOR TRANSLÚCIDA */}
+                  <div className="absolute top-3.5 left-3.5 z-10">
+                    <span className="inline-flex items-center gap-1.5 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-md text-[#00758D] dark:text-[#6BCDB2] border border-slate-200/70 dark:border-slate-700/70 shadow-2xs">
+                      <Icon className="w-3 h-3 text-[#69a53c]" />
+                      <span>{win.tag}</span>
                     </span>
                   </div>
 
-                  <h3 className="font-extrabold text-slate-900 dark:text-white text-base mb-1 group-hover:text-[#00758D] dark:group-hover:text-[#6BCDB2] transition-colors">
+                  {/* BOTÓN CIRCULAR FLOTANTE DE ACCIÓN */}
+                  <div className="absolute top-3.5 right-3.5 z-10 w-8 h-8 rounded-full bg-white/90 dark:bg-slate-800/90 border border-slate-200/70 dark:border-slate-700 flex items-center justify-center text-slate-500 group-hover:bg-[#00758D] group-hover:text-white group-hover:border-[#00758D] transition-all duration-300">
+                    <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                  </div>
+
+                  <img
+                    src={win.image}
+                    alt={win.title}
+                    loading="lazy"
+                    className="w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-108"
+                  />
+                </div>
+
+                {/* C2 & C5: TÍTULO + DATA CHIPS (CERO PÁRRAFOS LARGOS) */}
+                <div className="p-5">
+                  <h3 className="font-black text-slate-900 dark:text-white text-lg tracking-tight mb-2.5 group-hover:text-[#00758D] dark:group-hover:text-[#6BCDB2] transition-colors">
                     {win.title}
                   </h3>
 
-                  <p className="text-[11px] font-semibold text-slate-400 mb-2">
-                    {win.subtitle}
-                  </p>
-
-                  <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed">
-                    {win.desc}
-                  </p>
-                </div>
-
-                <div className="pt-4 mt-4 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs font-bold text-[#00758D] dark:text-[#6BCDB2]">
-                  <span>Abrir Ventana</span>
-                  <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  <div className="flex flex-wrap gap-1.5">
+                    {win.chips.map((chip, idx) => (
+                      <span
+                        key={idx}
+                        className="text-[10px] font-bold px-2.5 py-1 rounded-lg bg-slate-100/90 dark:bg-slate-800 text-slate-600 dark:text-slate-300"
+                      >
+                        {chip}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
             );
@@ -153,43 +150,44 @@ export default function InicioHub({
         </div>
       </section>
 
-      {/* 3. BANNER DE COTIZACIÓN RÁPIDA WHATSAPP */}
+      {/* 3. BARRA GLASSMORPHISM COMPACTA DE CONVERSIÓN DIRECTA */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#005071] via-[#00758D] to-[#00899e] text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="text-center md:text-left">
-            <span className="text-[10px] font-bold uppercase tracking-widest text-teal-200 block mb-1">
-              Atención Comercial Inmediata • Sabaneta, Antioquia
-            </span>
-            <h3 className="text-xl sm:text-2xl font-black">
-              ¿Requiere Asesoría Técnica o Cotización Indexada?
-            </h3>
-            <p className="text-xs sm:text-sm text-teal-100 mt-1 max-w-xl">
-              Nuestros ingenieros biomédicos le entregan la propuesta formal con registro INVIMA y soporte normativo en minutos.
-            </p>
+        <div className="px-6 py-5 rounded-3xl bg-gradient-to-r from-[#005071] via-[#00758D] to-[#00687d] text-white shadow-lg flex flex-col md:flex-row items-center justify-between gap-4">
+          <div className="flex items-center gap-3.5 text-center md:text-left">
+            <span className="hidden sm:flex w-3 h-3 rounded-full bg-[#69a53c] ring-4 ring-[#69a53c]/30 shrink-0"></span>
+            <div>
+              <h3 className="text-base sm:text-lg font-black tracking-tight">
+                ¿Requiere Cotización Institucional o Asesoría Biomédica?
+              </h3>
+              <p className="text-xs text-teal-100/90">
+                Atención directa • (+57) 300 251 1990 • ventas@cliniksoluciones.com
+              </p>
+            </div>
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 shrink-0">
+          <div className="flex items-center gap-2.5 shrink-0">
             <a
               href={whatsAppGeneralUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-[#69a53c] hover:bg-[#588d32] text-white text-xs font-bold py-3.5 px-6 rounded-xl shadow-md transition-all cursor-pointer"
+              className="flex items-center gap-2 bg-[#69a53c] hover:bg-[#588d32] text-white text-xs font-extrabold py-3 px-5 rounded-xl shadow-md transition-all cursor-pointer"
             >
               <MessageSquare className="w-4 h-4" />
-              <span>WhatsApp Directo (+57 300 202 1894)</span>
+              <span>WhatsApp</span>
             </a>
 
             <button
               onClick={() => onOpenQuote()}
-              className="flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white text-xs font-semibold py-3.5 px-5 rounded-xl border border-white/20 transition-all cursor-pointer"
+              className="flex items-center gap-2 bg-white/15 hover:bg-white/25 text-white text-xs font-bold py-3 px-4 rounded-xl border border-white/20 transition-all cursor-pointer"
             >
+              <Send className="w-3.5 h-3.5" />
               <span>Formulario B2B</span>
             </button>
           </div>
         </div>
       </section>
 
-      {/* 4. MURO DE CONFIANZA: CLIENTES REALES (UPB, NUTRESA, METROSALUD, BOMBEROS) */}
+      {/* 4. MURO DE CONFIANZA: CLIENTES REALES */}
       <ClientesSection />
     </div>
   );

@@ -1,26 +1,45 @@
 /**
- * VORTEX Labs — Motor Conversacional WhatsApp para CliniK Soluciones
- * Conexión directa al Agente Comercial (+57 300 202 1894)
+ * VORTEX Labs — Motor Conversacional WhatsApp para CliniK Soluciones Colombia S.A.S.
+ * Conexión directa al Canal Oficial (+57 300 251 1990 | ventas@cliniksoluciones.com)
+ * Arquitectura Modular: COPY-v2.2 | DATA-v2.1
  */
+
+export const OFFICIAL_WHATSAPP_NUMBER = "573002511990";
+export const OFFICIAL_SALES_EMAIL = "ventas@cliniksoluciones.com";
 
 export function buildWhatsAppQuoteUrl({
   name = "Equipamiento Biomédico Institucional",
   sku = "CLINIK-GEN-2026",
-  brand = "CliniK / Nova Médica",
-  category = "Dotación Hospitalaria",
-  modality = "1 Unidad"
+  brand = "CliniK Soluciones",
+  category = "Dotación Biomédica",
+  modality = "1 Unidad (Compra Directa)",
+  customNote = "",
+  clientData = null
 } = {}) {
-  const phoneNumber = "573002021894";
+  let message = `Hola CliniK Soluciones, deseo solicitar una cotización formal (Modalidad Venta):
 
-  const message = `Hola CliniK Soluciones, deseo solicitar la cotización del día para el siguiente equipo biomédico:
+📌 *Producto / Paquete:* ${name}
+🏷️ *Marca / Ref:* ${brand} • ${sku}
+🏥 *Línea:* ${category}
+📦 *Cantidad / Alcance:* ${modality}
+🛡️ *Garantía y Respaldo:* 12 Meses • Cumplimiento normativo (Res. 3100 / Res. 3316 de 2019)`;
 
-📌 Equipo: ${name}
-🏷️ Marca / SKU: ${brand} • ${sku}
-🏥 Línea Clínica: ${category}
-📦 Modalidad de Interés: ${modality}
-📋 Respaldo Requerido: Registro INVIMA vigente y protocolo metrológico Res. 3100.
+  if (customNote) {
+    message += `\n📝 *Requerimiento / Detalle:* ${customNote}`;
+  }
 
-¿Podrían confirmarme el valor comercial indexado y la disponibilidad para entrega inmediata?`;
+  if (clientData) {
+    message += `\n\n🏢 *DATOS INSTITUCIONALES DEL SOLICITANTE:*`;
+    if (clientData.razonSocial) message += `\n• *Razón Social:* ${clientData.razonSocial}`;
+    if (clientData.nombreComercial) message += `\n• *Nombre Comercial:* ${clientData.nombreComercial}`;
+    if (clientData.contactName) message += `\n• *Contacto:* ${clientData.contactName}`;
+    if (clientData.phone) message += `\n• *Teléfono:* ${clientData.phone}`;
+    if (clientData.email) message += `\n• *Correo:* ${clientData.email}`;
+    if (clientData.city) message += `\n• *Ciudad:* ${clientData.city}`;
+    if (clientData.notes) message += `\n• *Listado / Observaciones:* ${clientData.notes}`;
+  }
 
-  return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  message += `\n\n¿Podrían brindarme asesoría comercial y disponibilidad?`;
+
+  return `https://wa.me/${OFFICIAL_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }

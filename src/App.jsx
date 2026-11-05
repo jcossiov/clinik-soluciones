@@ -5,9 +5,9 @@ import CardioprotegidosSection from "./components/CardioprotegidosSection";
 import AmbulanciasSection from "./components/AmbulanciasSection";
 import ServiciosSection from "./components/ServiciosSection";
 import CatalogSection from "./components/CatalogSection";
+import RescateSection from "./components/RescateSection";
 import SimulacionSection from "./components/SimulacionSection";
 import AccesoriosSection from "./components/AccesoriosSection";
-import RoiCalculator from "./components/RoiCalculator";
 import CliniKOSAdmin from "./components/CliniKOSAdmin";
 import CliniKLogin from "./components/CliniKLogin";
 import Modals from "./components/Modals";
@@ -21,7 +21,9 @@ import {
   Activity,
   Lock,
   Layers,
-  Sparkles
+  LifeBuoy,
+  Package,
+  GraduationCap
 } from "lucide-react";
 import { INITIAL_KANBAN_TICKETS } from "./data/products";
 
@@ -57,7 +59,7 @@ export default function App() {
   const [isDistributorModalOpen, setIsDistributorModalOpen] = useState(false);
   const [isPdfModalOpen, setIsPdfModalOpen] = useState(false);
 
-  // Pestaña secundaria dentro del catálogo ('equipos' | 'accesorios' | 'simulacion')
+  // Pestaña secundaria dentro del catálogo ('equipos' | 'rescate' | 'accesorios' | 'simulacion')
   const [catalogSubTab, setCatalogSubTab] = useState("equipos");
 
   // Tickets de Kanban en CliniK OS
@@ -133,14 +135,41 @@ export default function App() {
   const viewMeta = {
     inicio: { title: "Portal Principal", icon: Layers },
     catalogo: { title: "Catálogo de Equipamiento Biomédico", icon: Stethoscope },
-    cardioprotegidos: { title: "Espacios Cardioprotegidos (Ley 1831)", icon: HeartPulse },
-    ambulancias: { title: "Dotación Ambulancias TAB & TAM (Res. 3100)", icon: Truck },
-    servicios: { title: "Servicios Biomédicos & Metrología NTC-ISO 17025", icon: Activity },
+    cardioprotegidos: { title: "Cardioprotección (Resolución 3316 de 2019)", icon: HeartPulse },
+    ambulancias: { title: "Dotación Ambulancias TAB y TAM (Resolución 3100 de 2019)", icon: Truck },
+    servicios: { title: "Servicios de Ingeniería Biomédica y Metrología", icon: Activity },
     clinikos: { title: "CliniK OS • Centro de Mando Biomédico", icon: Lock }
   };
 
   const currentMeta = viewMeta[currentView] || viewMeta.inicio;
   const CurrentIcon = currentMeta.icon;
+
+  const catalogMacroTabs = [
+    {
+      id: "equipos",
+      label: "Equipos Médicos",
+      sub: "10 Subcategorías Biomédicas",
+      icon: Stethoscope
+    },
+    {
+      id: "rescate",
+      label: "Rescate y Atención Prehospitalaria",
+      sub: "Camillas, Inmovilización y APH",
+      icon: LifeBuoy
+    },
+    {
+      id: "accesorios",
+      label: "Accesorios y Consumibles",
+      sub: "Parches, Baterías y Sensores",
+      icon: Package
+    },
+    {
+      id: "simulacion",
+      label: "Simulación y Educación",
+      sub: "Línea NASCO Healthcare",
+      icon: GraduationCap
+    }
+  ];
 
   return (
     <div className="w-full max-w-[100vw] min-h-screen flex flex-col bg-white dark:bg-[#080d15] text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300 overflow-x-hidden">
@@ -187,7 +216,7 @@ export default function App() {
                 <span>Cambiar ventana:</span>
                 {[
                   { id: "catalogo", label: "Catálogo" },
-                  { id: "cardioprotegidos", label: "Cardioprotegidos" },
+                  { id: "cardioprotegidos", label: "Cardioprotección" },
                   { id: "ambulancias", label: "Ambulancias" },
                   { id: "servicios", label: "Servicios" }
                 ]
@@ -226,44 +255,55 @@ export default function App() {
 
         {/* ========================================================
             VENTANA 2: CATÁLOGO DE EQUIPAMIENTO BIOMÉDICO
+            (CON 4 MACRO-BOTONES GRANDES Y VISIBLES EN COLORES DE MARCA)
            ======================================================== */}
         {currentView === "catalogo" && (
-          <div className="w-full space-y-8 animate-in fade-in duration-300">
-            {/* SUB-PESTAÑAS DENTRO DEL CATÁLOGO: EQUIPOS / ACCESORIOS / SIMULACIÓN */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-2">
-              <div className="flex items-center justify-center">
-                <div className="p-1 bg-slate-100 dark:bg-slate-800 rounded-2xl flex items-center gap-1 border border-slate-200 dark:border-slate-700">
-                  <button
-                    onClick={() => setCatalogSubTab("equipos")}
-                    className={`py-2 px-4 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                      catalogSubTab === "equipos"
-                        ? "bg-[#00758D] text-white shadow-xs font-extrabold"
-                        : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
-                    }`}
-                  >
-                    Equipos Médicos Principales
-                  </button>
-                  <button
-                    onClick={() => setCatalogSubTab("accesorios")}
-                    className={`py-2 px-4 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                      catalogSubTab === "accesorios"
-                        ? "bg-[#00758D] text-white shadow-xs font-extrabold"
-                        : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
-                    }`}
-                  >
-                    Accesorios & Consumibles
-                  </button>
-                  <button
-                    onClick={() => setCatalogSubTab("simulacion")}
-                    className={`py-2 px-4 rounded-xl text-xs font-bold transition-all cursor-pointer ${
-                      catalogSubTab === "simulacion"
-                        ? "bg-[#00758D] text-white shadow-xs font-extrabold"
-                        : "text-slate-600 dark:text-slate-400 hover:text-slate-900"
-                    }`}
-                  >
-                    Simulación & Educación RCP
-                  </button>
-                </div>
+          <div className="w-full space-y-6 animate-in fade-in duration-300">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4">
+              <div className="text-center mb-4">
+                <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#00758D] dark:text-[#6BCDB2]">
+                  Seleccione la Línea del Catálogo que Desea Explorar
+                </span>
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+                {catalogMacroTabs.map((tab) => {
+                  const TabIcon = tab.icon;
+                  const isActive = catalogSubTab === tab.id;
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => setCatalogSubTab(tab.id)}
+                      className={`p-4 rounded-2xl text-left transition-all cursor-pointer flex items-center gap-3.5 border-2 ${
+                        isActive
+                          ? "bg-gradient-to-r from-[#00758D] to-[#69a53c] text-white border-transparent shadow-lg shadow-teal-900/15 scale-[1.01]"
+                          : "bg-white dark:bg-slate-900 text-slate-800 dark:text-slate-200 border-slate-200 dark:border-slate-800 hover:border-[#69a53c]"
+                      }`}
+                    >
+                      <div
+                        className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${
+                          isActive
+                            ? "bg-white/20 text-white"
+                            : "bg-teal-50 dark:bg-slate-800 text-[#00758D] dark:text-[#6BCDB2]"
+                        }`}
+                      >
+                        <TabIcon className="w-5 h-5" />
+                      </div>
+                      <div className="min-w-0">
+                        <span className="block font-extrabold text-sm sm:text-base leading-tight truncate">
+                          {tab.label}
+                        </span>
+                        <span
+                          className={`block text-[11px] font-medium mt-0.5 truncate ${
+                            isActive ? "text-teal-100" : "text-slate-500 dark:text-slate-400"
+                          }`}
+                        >
+                          {tab.sub}
+                        </span>
+                      </div>
+                    </button>
+                  );
+                })}
               </div>
             </div>
 
@@ -274,18 +314,31 @@ export default function App() {
               />
             )}
 
+            {catalogSubTab === "rescate" && (
+              <RescateSection
+                onSelectProduct={setSelectedProduct}
+                onOpenQuote={handleOpenQuote}
+              />
+            )}
+
             {catalogSubTab === "accesorios" && (
-              <AccesoriosSection onOpenQuote={handleOpenQuote} />
+              <AccesoriosSection
+                onSelectProduct={setSelectedProduct}
+                onOpenQuote={handleOpenQuote}
+              />
             )}
 
             {catalogSubTab === "simulacion" && (
-              <SimulacionSection onOpenQuote={handleOpenQuote} />
+              <SimulacionSection
+                onSelectProduct={setSelectedProduct}
+                onOpenQuote={handleOpenQuote}
+              />
             )}
           </div>
         )}
 
         {/* ========================================================
-            VENTANA 3: ESPACIOS CARDIOPROTEGIDOS (LEY 1831)
+            VENTANA 3: CARDIOPROTECCIÓN (RESOLUCIÓN 3316 DE 2019)
            ======================================================== */}
         {currentView === "cardioprotegidos" && (
           <div className="w-full animate-in fade-in duration-300">
@@ -297,7 +350,7 @@ export default function App() {
         )}
 
         {/* ========================================================
-            VENTANA 4: DOTACIÓN DE AMBULANCIAS TAB & TAM
+            VENTANA 4: DOTACIÓN DE AMBULANCIAS TAB Y TAM
            ======================================================== */}
         {currentView === "ambulancias" && (
           <div className="w-full animate-in fade-in duration-300">
@@ -309,12 +362,14 @@ export default function App() {
         )}
 
         {/* ========================================================
-            VENTANA 5: SERVICIOS BIOMÉDICOS & METROLOGÍA
+            VENTANA 5: SERVICIOS BIOMÉDICOS Y METROLOGÍA (SIN RENTING)
            ======================================================== */}
         {currentView === "servicios" && (
-          <div className="w-full space-y-8 animate-in fade-in duration-300">
-            <ServiciosSection onOpenQuote={handleOpenQuote} />
-            <RoiCalculator onOpenQuote={handleOpenQuote} />
+          <div className="w-full animate-in fade-in duration-300">
+            <ServiciosSection
+              onOpenQuote={handleOpenQuote}
+              onSelectProduct={setSelectedProduct}
+            />
           </div>
         )}
 

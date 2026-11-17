@@ -8,7 +8,7 @@ export const VERSION_REGISTRY = {
     version: "COPY-v2.2",
     updatedAt: "2026-11-04",
     description:
-      "Textos normativos Res. 3316 de 2019 y Res. 3100 de 2019, Hero exacto del documento oficial, garantía fija 12 meses, modalidad 100% Venta y canales oficiales (+57 300 251 1990 / ventas@cliniksoluciones.com)."
+      "Textos normativos Res. 3316 de 2019 y Res. 3100 de 2019, Hero exacto del documento oficial, garantía fija 12 meses, modalidad 100% Venta y canales oficiales (+57 300 251 1994 / ventas@cliniksoluciones.com)."
   },
   data: {
     version: "DATA-v2.1",

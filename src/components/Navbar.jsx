@@ -79,7 +79,7 @@ export default function Navbar({
               <span className="font-mono text-[10px]">{COMPANY_INFO.emailGeneral}</span>
             </a>
             <a
-              href="tel:+573002511990"
+              href="tel:+573002511994"
               className="flex items-center gap-1 hover:text-white transition-colors"
             >
               <PhoneCall className="w-3 h-3 text-[#6BCDB2]" />
@@ -207,7 +207,7 @@ export default function Navbar({
                 className="flex-1 flex items-center justify-center gap-2 bg-[#69a53c] text-white text-xs font-bold py-2.5 rounded-xl cursor-pointer"
               >
                 <MessageSquare className="w-4 h-4" />
-                <span>WhatsApp (+57 300 251 1990)</span>
+                <span>WhatsApp (+57 300 251 1994)</span>
               </button>
             </div>
           </div>

@@ -13,7 +13,7 @@ const PAQUETES_DATA = [
     brand: "Mindray Medical",
     sku: "PKG-3316-MINDRAY-C1",
     image: "./images/products/dea-mindray-c1a.jpg",
-    invimaReg: "2020EBC-0021540",
+    invimaReg: "Registro Sanitario Vigente",
     warranty: "12 Meses",
     badge: "QShock™ <8s",
     includesDea: true,
@@ -21,19 +21,19 @@ const PAQUETES_DATA = [
     highlights: ["Bifásico 360J", "QShock™ <8s", "Garantía 12M"],
     includedItems: [
       "DEA Mindray BeneHeart C1A Bifásico hasta 360J (Garantía 12 meses)",
-      "Gabinete mural normalizado con alarma sonora 100dB y luz estroboscópica",
+      "Gabinete WAP-812-M11 (Blanco 40×36×18 cm, metal, alarma visual y sonora 80 dB con luz estroboscópica)",
       "Kit de bioseguridad y RCP rápida (máscara RCP, tijeras trauma, rasuradora, guantes)",
-      "Señalética institucional personalizada en español con logo de la entidad",
+      "Señalética institucional personalizada en colores, en español e inglés (no fotoluminiscente) según identidad corporativa",
       "Capacitación certificada en Soporte Vital Básico (BLS) e instalación física"
     ],
     shortDesc:
-      "Implementación completa Res. 3316 de 2019 con DEA Mindray C1 bifásico hasta 360J, tecnología ResQNavi™ con guía adaptativa en español y selector rápido Adulto/Pediátrico.",
+      "Implementación completa Res. 3316 de 2019 con DEA Mindray C1 bifásico hasta 360J, tecnología ResQNavi™ con guía adaptativa en español, gabinete WAP-812-M11 y señalética bilingüe personalizada.",
     specs: [
       { label: "Modelo de DEA Incluido", value: "Mindray BeneHeart C1A (C1) Bifásico hasta 360 Joules" },
       { label: "Velocidad de Primera Descarga", value: "Tecnología QShock™ en menos de 8 segundos" },
-      { label: "Modo Pediátrico", value: "Conmutador físico directo Adulto/Niño con electrodos pre-conectados" },
-      { label: "Protección y Robustez", value: "Grado IP55 contra agua/polvo y resistencia a caídas de 1.5 m" },
-      { label: "Elementos del Paquete", value: "DEA Mindray C1 + Gabinete con alarma + Kit Bioseguridad + Señalética personalizada + Capacitación BLS + Instalación" },
+      { label: "Gabinete Incluido", value: "WAP-812-M11 Blanco 40×36×18 cm, metal, alarma 80 dB + estrobo" },
+      { label: "Señalética", value: "Personalizada en colores, en español e inglés (no fotoluminiscente)" },
+      { label: "Elementos del Paquete", value: "DEA Mindray C1 + Gabinete WAP-812-M11 + Kit Bioseguridad + Señalética bilingüe + Capacitación BLS + Instalación" },
       { label: "Garantía Comercial", value: "12 Meses • Modalidad Venta Directa" }
     ]
   },
@@ -46,7 +46,7 @@ const PAQUETES_DATA = [
     brand: "Mindray Medical",
     sku: "PKG-3316-MINDRAY-C2",
     image: "./images/products/dea-mindray-c2.png",
-    invimaReg: "2020EBC-0021540",
+    invimaReg: "Registro Sanitario Vigente",
     warranty: "12 Meses",
     badge: "Pantalla Color 7\"",
     includesDea: true,
@@ -54,19 +54,18 @@ const PAQUETES_DATA = [
     highlights: ["Pantalla Color 7\"", "Bifásico 360J", "Garantía 12M"],
     includedItems: [
       "DEA Mindray BeneHeart C2 con Pantalla Color TFT de 7\" (Garantía 12 meses)",
-      "Gabinete mural normalizado con alarma sonora 100dB y luz estroboscópica",
+      "Gabinete WAP-812-M11 (Blanco 40×36×18 cm, metal, alarma visual y sonora 80 dB con luz estroboscópica)",
       "Kit de bioseguridad y RCP rápida (máscara RCP, tijeras trauma, rasuradora, guantes)",
-      "Señalética institucional personalizada en español con logo de la entidad",
+      "Señalética institucional personalizada en colores, en español e inglés (no fotoluminiscente) según identidad corporativa",
       "Capacitación certificada en Soporte Vital Básico (BLS) e instalación física"
     ],
     shortDesc:
-      "Paquete integral Res. 3316 de 2019 con DEA Mindray C2 equipado con pantalla a color de 7 pulgadas, animaciones gráficas paso a paso y descarga bifásica de 360J.",
+      "Paquete integral Res. 3316 de 2019 con DEA Mindray C2 equipado con pantalla a color de 7 pulgadas, gabinete WAP-812-M11 y señalética bilingüe personalizada en colores.",
     specs: [
       { label: "Modelo de DEA Incluido", value: "Mindray BeneHeart C2 con Pantalla TFT Color de 7\"" },
-      { label: "Asistencia Visual y Voz", value: "Animaciones de RCP en pantalla color + guía de voz ResQNavi™" },
-      { label: "Energía de Descarga", value: "Bifásica BTE escalable hasta 360 Joules (Adulto/Pediátrico)" },
-      { label: "Protección Ambiental", value: "IP55 y autoverificación automática diaria, semanal y mensual" },
-      { label: "Elementos del Paquete", value: "DEA Mindray C2 + Gabinete con alarma + Kit Bioseguridad + Señalética personalizada + Capacitación BLS + Instalación" },
+      { label: "Gabinete Incluido", value: "WAP-812-M11 Blanco 40×36×18 cm, metal, alarma 80 dB + estrobo" },
+      { label: "Señalética", value: "Personalizada en colores, en español e inglés (no fotoluminiscente)" },
+      { label: "Elementos del Paquete", value: "DEA Mindray C2 + Gabinete WAP-812-M11 + Kit Bioseguridad + Señalética bilingüe + Capacitación BLS + Instalación" },
       { label: "Garantía Comercial", value: "12 Meses • Modalidad Venta Directa" }
     ]
   },
@@ -79,7 +78,7 @@ const PAQUETES_DATA = [
     brand: "AMoul Medical",
     sku: "PKG-3316-AMOUL-I7",
     image: "./images/products/dea-i7-plus.png",
-    invimaReg: "2020EIB-0018590",
+    invimaReg: "Registro Sanitario Vigente",
     warranty: "12 Meses",
     badge: "Bifásico 360J",
     includesDea: true,
@@ -87,19 +86,18 @@ const PAQUETES_DATA = [
     highlights: ["Autotest Diario", "Bifásico 360J", "Garantía 12M"],
     includedItems: [
       "DEA AMoul i7 Plus Bifásico 100-360J con autotest diario (Garantía 12 meses)",
-      "Gabinete mural normalizado con alarma sonora 100dB y luz estroboscópica",
+      "Gabinete WAP-812-M11 (Blanco 40×36×18 cm, metal, alarma visual y sonora 80 dB con luz estroboscópica)",
       "Kit de bioseguridad y RCP rápida (máscara RCP, tijeras trauma, rasuradora, guantes)",
-      "Señalética institucional personalizada en español con logo de la entidad",
+      "Señalética institucional personalizada en colores, en español e inglés (no fotoluminiscente) según identidad corporativa",
       "Capacitación certificada en Soporte Vital Básico (BLS) e instalación física"
     ],
     shortDesc:
-      "Dotación integral Res. 3316 de 2019 con DEA AMoul i7 Plus bifásico inteligente, autotest diario de batería y electrodos multifuncionales pre-conectados.",
+      "Dotación integral Res. 3316 de 2019 con DEA AMoul i7 Plus bifásico inteligente, gabinete WAP-812-M11 y señalética bilingüe personalizada en colores.",
     specs: [
-      { label: "Modelo de DEA Incluido", value: "AMoul i7 Plus Bifásico 100J a 360J con registro INVIMA Clase III" },
-      { label: "Autoverificación", value: "Autotest diario automático de estado de batería, circuitos y parches" },
-      { label: "Guía de Reanimación", value: "Indicaciones audibles en español y metrónomo luminoso de compresiones" },
-      { label: "Modo Adulto / Infantil", value: "Cambio inmediato a modo pediátrico sin reemplazar los electrodos" },
-      { label: "Elementos del Paquete", value: "DEA AMoul i7 Plus + Gabinete con alarma + Kit Bioseguridad + Señalética personalizada + Capacitación BLS + Instalación" },
+      { label: "Modelo de DEA Incluido", value: "AMoul i7 Plus Bifásico 100J a 360J con registro INVIMA" },
+      { label: "Gabinete Incluido", value: "WAP-812-M11 Blanco 40×36×18 cm, metal, alarma 80 dB + estrobo" },
+      { label: "Señalética", value: "Personalizada en colores, en español e inglés (no fotoluminiscente)" },
+      { label: "Elementos del Paquete", value: "DEA AMoul i7 Plus + Gabinete WAP-812-M11 + Kit Bioseguridad + Señalética bilingüe + Capacitación BLS + Instalación" },
       { label: "Garantía Comercial", value: "12 Meses • Modalidad Venta Directa" }
     ]
   },
@@ -112,7 +110,7 @@ const PAQUETES_DATA = [
     brand: "Primedic Germany",
     sku: "PKG-3316-PRIMEDIC-YA",
     image: "./images/products/dea-primedic-ya.webp",
-    invimaReg: "2021EBC-0023810",
+    invimaReg: "Registro Sanitario Vigente",
     warranty: "12 Meses",
     badge: "Ingeniería Alemana",
     includesDea: true,
@@ -120,19 +118,18 @@ const PAQUETES_DATA = [
     highlights: ["Tecnología Alemana", "Bifásico 360J", "Garantía 12M"],
     includedItems: [
       "DEA Primedic HeartSave YA (Ingeniería Alemana) Bifásico 360J (Garantía 12 meses)",
-      "Gabinete mural normalizado con alarma sonora 100dB y luz estroboscópica",
+      "Gabinete WAP-812-M11 (Blanco 40×36×18 cm, metal, alarma visual y sonora 80 dB con luz estroboscópica)",
       "Kit de bioseguridad y RCP rápida (máscara RCP, tijeras trauma, rasuradora, guantes)",
-      "Señalética institucional personalizada en español con logo de la entidad",
+      "Señalética institucional personalizada en colores, en español e inglés (no fotoluminiscente) según identidad corporativa",
       "Capacitación certificada en Soporte Vital Básico (BLS) e instalación física"
     ],
     shortDesc:
-      "Implementación Res. 3316 de 2019 con DEA alemán Primedic HeartSave YA automático, botón pediátrico dedicado, ajuste automático de volumen ambiental y alta durabilidad.",
+      "Implementación Res. 3316 de 2019 con DEA alemán Primedic HeartSave YA automático, gabinete WAP-812-M11 y señalética bilingüe personalizada en colores.",
     specs: [
       { label: "Modelo de DEA Incluido", value: "Primedic HeartSave YA (Ingeniería Alemana) Bifásico hasta 360J" },
-      { label: "Operación Inteligente", value: "Análisis automático de ECG y guía acústica con volumen autoadaptable" },
-      { label: "Modo Infantil Directo", value: "Botón pediátrico dedicado sin necesidad de cambiar electrodos" },
-      { label: "Protección Ambiental", value: "Certificación IP55 contra chorros de agua y polvo" },
-      { label: "Elementos del Paquete", value: "DEA Primedic HeartSave YA + Gabinete con alarma + Kit Bioseguridad + Señalética personalizada + Capacitación BLS + Instalación" },
+      { label: "Gabinete Incluido", value: "WAP-812-M11 Blanco 40×36×18 cm, metal, alarma 80 dB + estrobo" },
+      { label: "Señalética", value: "Personalizada en colores, en español e inglés (no fotoluminiscente)" },
+      { label: "Elementos del Paquete", value: "DEA Primedic HeartSave YA + Gabinete WAP-812-M11 + Kit Bioseguridad + Señalética bilingüe + Capacitación BLS + Instalación" },
       { label: "Garantía Comercial", value: "12 Meses • Modalidad Venta Directa" }
     ]
   },
@@ -144,32 +141,32 @@ const PAQUETES_DATA = [
     packageTitle: "Paquete de Espacio Cardioprotegido (Para Clientes que ya tienen DEA)",
     brand: "CliniK Soluciones",
     sku: "PKG-3316-COMPLEMENTO-5EN1",
-    image: "./images/products/gabinete-wap812.jpg",
-    invimaReg: "Kit Normativo Res. 3316",
+    image: "./images/products/gabinete-wap812-m11.png",
+    invimaReg: "Registro Sanitario Vigente",
     warranty: "12 Meses",
     badge: "No Incluye DEA",
     includesDea: false,
     chips: ["No Incluye DEA", "5 Complementos"],
-    highlights: ["No Incluye DEA", "Gabinete + Kit + Señalética", "Capacitación + Instalación"],
+    highlights: ["No Incluye DEA", "Gabinete WAP-812-M11 + Kit + Señalética", "Capacitación + Instalación"],
     warningNote:
       "Nota importante: Este paquete NO incluye el equipo Desfibrilador (DEA). Está diseñado para instituciones que ya cuentan con un DEA y desean implementar los demás requisitos de la Resolución 3316 de 2019.",
     disclaimerNote:
       "Nota importante: Este paquete NO incluye el equipo Desfibrilador (DEA). Está diseñado para instituciones que ya cuentan con un DEA.",
     includedItems: [
-      "1. Señalética institucional personalizada en español con logo corporativo",
-      "2. Gabinete mural normalizado con alarma sonora y luz estroboscópica",
+      "1. Señalética institucional personalizada en colores, en español e inglés (no fotoluminiscente)",
+      "2. Gabinete WAP-812-M11 (Blanco 40×36×18 cm, metal, alarma visual y sonora 80 dB con luz estroboscópica)",
       "3. Kit de bioseguridad y RCP rápida (máscara, tijeras trauma, rasuradora, guantes)",
       "4. Capacitación certificada en Soporte Vital Básico (BLS) y manejo del DEA",
       "5. Instalación física en sitio (*No incluye el equipo DEA*)"
     ],
     shortDesc:
-      "¿Ya cuentas con un DEA en tu empresa o institución? Adquiere únicamente el paquete normativo de 5 componentes para completar tu Espacio Cardioprotegido bajo la Resolución 3316 de 2019.",
+      "¿Ya cuentas con un DEA en tu empresa o institución? Adquiere únicamente el paquete normativo de 5 componentes con gabinete WAP-812-M11 y señalética bilingüe bajo la Resolución 3316 de 2019.",
     specs: [
-      { label: "Alcance del Paquete", value: "Exclusivo para instituciones que ya poseen un DEA (comprado con nosotros o con otro proveedor)" },
-      { label: "Ítem 1 Incluido", value: "Señalética institucional personalizada en español" },
-      { label: "Ítem 2 Incluido", value: "Gabinete mural normalizado con alarma sonora y luz estroboscópica" },
-      { label: "Ítem 3 Incluido", value: "Kit de bioseguridad y RCP rápida (máscara, tijeras trauma, rasuradora, guantes)" },
-      { label: "Ítem 4 y 5 Incluidos", value: "Capacitación certificada en Soporte Vital Básico (BLS) + Instalación física" },
+      { label: "Alcance del Paquete", value: "Exclusivo para instituciones que ya poseen un DEA" },
+      { label: "Gabinete Incluido", value: "WAP-812-M11 Blanco 40×36×18 cm, metal, alarma 80 dB + estrobo" },
+      { label: "Señalética", value: "Personalizada en colores, en español e inglés (no fotoluminiscente)" },
+      { label: "Kit Bioseguridad y RCP", value: "Máscara, tijeras trauma, rasuradora, guantes" },
+      { label: "Capacitación e Instalación", value: "Capacitación BLS + Instalación física en sitio" },
       { label: "Aclaración Comercial", value: "No incluye el equipo Desfibrilador Externo Automático (DEA)" }
     ]
   }
@@ -225,13 +222,28 @@ export const CARDIOPROTEGIDOS_DETAILS = {
     },
     {
       num: 2,
-      titulo: "Gabinete Mural con Alarma Sonora y Visual",
-      brand: "WAP MEDICAL",
-      sku: "001-0021-000014",
-      image: "./images/products/gabinete-wap812.jpg",
-      microDesc: "Gabinete normalizado con visor anti-impacto, alarma acústica de 100 dB y luz estroboscópica LED.",
-      pills: ["Alarma 100dB", "Estrobo LED", "Visor Anti-Impacto"],
-      desc: "Gabinete mural de alta resistencia con ventana de inspección rápida, bordes redondeados de seguridad y sistema de alarma sonora y luminosa que se activa automáticamente al abrir la puerta ante una emergencia.",
+      titulo: "Gabinete Mural para DEA WAP-812-M11",
+      brand: "WAP / LAS Electromedicina",
+      sku: "WAP-812-M11",
+      image: "./images/products/gabinete-wap812-m11.png",
+      microDesc: "Gabinete para DEA de montaje en pared para uso en interiores. Manténgalo en un lugar de fácil acceso para estar preparado en caso de una emergencia de paro cardiaco repentino.",
+      pills: ["Modelo WAP-812-M11", "Blanco • 40x36x18 cm", "Alarma 80 dB + Estrobo"],
+      desc: "Gabinete para DEA de montaje en pared para uso en interiores. Manténgalo en un lugar de fácil acceso para estar preparado en caso de una emergencia de paro cardiaco repentino.",
+      specs: [
+        { label: "Modelo", value: "WAP-812-M11" },
+        { label: "Color y Material", value: "Blanco • Metal" },
+        { label: "Dimensiones", value: "Alto 40 x Ancho 36 x Profundidad 18 CM" },
+        { label: "Peso", value: "4,8 kg" },
+        { label: "Características Eléctricas", value: "Alimentación eléctrica DC: Batería de 9 voltios" },
+        { label: "Alarma", value: "Alarma visual y sonora de 80 dB, activación automática a la apertura" }
+      ],
+      accessories: [
+        "Chapa con llave y manija",
+        "Ventana transparente de PC/acrílico",
+        "Luz estroboscópica",
+        "Manija de apertura de puerta",
+        "Alarma visual y sonora de 80 dB, se activa de forma automática a la apertura del gabinete"
+      ],
       icon: "Box"
     },
     {
@@ -250,10 +262,20 @@ export const CARDIOPROTEGIDOS_DETAILS = {
       titulo: "Señalética Institucional Personalizada",
       brand: "CLINIK SEÑALÉTICA",
       sku: "SIG-ILCOR-3316",
-      image: "./images/products/gabinete-wap812.jpg",
-      microDesc: "Señalética fotoluminiscente en español personalizada con el logo e identidad de su institución.",
-      pills: ["Personalizada con Logo", "Fotoluminiscente", "100% Español"],
-      desc: "Juego completo de señalización fotoluminiscente de ruta y ubicación de DEA en español, personalizada con la identidad visual y logotipo de su empresa o institución para máxima visibilidad en 360 grados.",
+      image: "./images/products/senaletica-clinik.png",
+      microDesc: "Señalética personalizada en colores, en español e inglés, de acuerdo con la identidad corporativa de su institución.",
+      pills: ["Personalizada en Colores", "Español e Inglés", "Con Logo Institucional"],
+      desc: "Señalización normativa de Espacio Cardioprotegido personalizada en colores según la imagen corporativa y logotipo del cliente, con textos bilingües en español e inglés (no fotoluminiscente).",
+      specs: [
+        { label: "Personalización", value: "Personalizada en colores y logotipo según identidad corporativa del cliente" },
+        { label: "Idiomas", value: "Bilingüe: Español e Inglés" },
+        { label: "Acabado", value: "Impresión de alta visibilidad institucional (No fotoluminiscente)" }
+      ],
+      accessories: [
+        "Señalización personalizada en colores según manual de marca del cliente",
+        "Textos bilingües en Español e Inglés",
+        "Material rígido de alta visibilidad (no fotoluminiscente)"
+      ],
       icon: "AlertTriangle"
     },
     {

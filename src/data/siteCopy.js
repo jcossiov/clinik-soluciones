@@ -9,9 +9,9 @@ export const COMPANY_INFO = {
   foundedYear: 2017,
   yearsOfExperience: 9,
   address: "Carrera 46 # 62 Sur - 59, Sabaneta, Antioquia, Colombia",
-  phone: "+573002511990",
-  phoneRaw: "573002511990",
-  phoneDisplay: "(+57) 300 251 1990",
+  phone: "+573002511994",
+  phoneRaw: "573002511994",
+  phoneDisplay: "(+57) 300 251 1994",
   emailGeneral: "ventas@cliniksoluciones.com",
   emailCommercial: "ventas@cliniksoluciones.com",
   website: "www.cliniksoluciones.com",
@@ -22,6 +22,7 @@ export const COMPANY_INFO = {
 };
 
 export const HERO_COPY = {
+  badge: "Ingeniería Biomédica B2B",
   authorityBadge: `Ingeniería Biomédica B2B • NIT ${COMPANY_INFO.nit}`,
   titlePrefix: "Dotación Biomédica y",
   titleHighlight: "Cardioprotección",
@@ -36,7 +37,9 @@ export const HERO_COPY = {
   featuredCard: {
     normBadge: "Resolución 3316 de 2019",
     statusBadge: "Autotest Diario",
-    title: "Espacio Cardioprotegido",
+    title: "Espacio Cardioprotegido y Dotación Biomédica",
+    image: "./images/hero-productos-estrella.png",
+    description: "DEA bifásico, gabinete con alarma, capacitación BLS y señalética.",
     desc: "DEA bifásico, gabinete con alarma, capacitación BLS y señalética.",
     ctaLabel: "Ver Solución"
   }
@@ -45,6 +48,7 @@ export const HERO_COPY = {
 export const SPECIAL_REQUEST_BANNER = {
   badge: "Asesoría Personalizada B2B",
   title: "¿No encuentras el equipo, accesorio o repuesto que buscas?",
+  highlight: "Pregúntanos aquí.",
   subtitle:
     "Manejamos miles de referencias hospitalarias, consumibles y repuestos por importación directa. Pregúntanos aquí y te cotizamos de inmediato.",
   ctaButton: "Si no encuentras lo que buscas, pregúntanos aquí"

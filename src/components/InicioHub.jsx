@@ -160,7 +160,7 @@ export default function InicioHub({
                 ¿Requiere Cotización Institucional o Asesoría Biomédica?
               </h3>
               <p className="text-xs text-teal-100/90">
-                Atención directa • (+57) 300 251 1990 • ventas@cliniksoluciones.com
+                Atención directa • (+57) 300 251 1994 • ventas@cliniksoluciones.com
               </p>
             </div>
           </div>

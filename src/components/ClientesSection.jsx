@@ -52,7 +52,7 @@ export default function ClientesSection() {
                 <Building2 className="w-4 h-4" />
               </div>
               <div className="min-w-0">
-                <h4 className="font-black text-slate-900 dark:text-white text-xs leading-snug truncate">
+                <h4 className="font-black text-slate-900 dark:text-white text-xs leading-snug truncate uppercase">
                   {client.name}
                 </h4>
                 <span className="text-[10px] font-semibold text-slate-400 block truncate">

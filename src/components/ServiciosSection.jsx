@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import {
+  Activity,
   BadgeCheck,
   GraduationCap,
   Wrench,
@@ -17,25 +18,26 @@ export default function ServiciosSection({ onOpenQuote, onSelectProduct }) {
 
   const iconMap = {
     Wrench,
+    Activity,
     Settings,
     BadgeCheck,
     GraduationCap
   };
 
-  // Fotografías representativas para cada una de las 4 subcategorías de servicio
+  // Personajes 3D estilo Pixar para cada una de las 4 subcategorías oficiales de servicio
   const serviceImages = {
-    "serv-preventivo": "./images/products/monitor-im70.jpg",
-    "serv-correctivo": "./images/products/anestesia-boaray700.jpg",
-    "serv-calibracion": "./images/products/desfibrilador-i2.png",
-    "serv-capacitacion": "./images/products/sim-smart-stat.webp"
+    "mantenimiento-preventivo": "./images/services/serv-preventivo-3d.png",
+    "mantenimiento-correctivo": "./images/services/serv-correctivo-3d.png",
+    "calibracion-metrologia": "./images/services/serv-calibracion-3d.png",
+    "capacitacion-bls": "./images/services/serv-capacitacion-3d.png"
   };
 
   // Chips cortos de 2-3 palabras (suprimiendo listas verticales de 4 oraciones)
   const serviceChips = {
-    "serv-preventivo": ["Cada 6 Meses", "Inspección Funcional", "Hoja de Vida"],
-    "serv-correctivo": ["Diagnóstico Electrónico", "Repuestos", "Pruebas de Carga"],
-    "serv-calibracion": ["Trazabilidad", "Certificado Metrológico", "Res. 3100"],
-    "serv-capacitacion": ["Soporte Vital BLS", "Práctica con DEA", "Certificado"]
+    "mantenimiento-preventivo": ["Cada 6 Meses", "Inspección Funcional", "Hoja de Vida"],
+    "mantenimiento-correctivo": ["Diagnóstico Electrónico", "Repuestos", "Pruebas de Carga"],
+    "calibracion-metrologia": ["Trazabilidad", "Certificado Metrológico", "Res. 3100"],
+    "capacitacion-bls": ["Soporte Vital BLS", "Práctica con DEA", "Certificado"]
   };
 
   const handleSendEquipmentListWhatsApp = () => {
@@ -110,10 +112,10 @@ export default function ServiciosSection({ onOpenQuote, onSelectProduct }) {
                 className="group rounded-3xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 hover:border-[#00758D] shadow-xs hover:shadow-2xl transition-all duration-300 flex flex-col justify-between overflow-hidden"
               >
                 <div>
-                  {/* C1: LIENZO FOTOGRÁFICO PROTAGONISTA (h-56) */}
+                  {/* C1: LIENZO FOTOGRÁFICO PROTAGONISTA (h-60) */}
                   <div
                     onClick={() => onSelectProduct && onSelectProduct(modalDetail)}
-                    className="relative h-56 w-full bg-gradient-to-b from-slate-50/90 to-white dark:from-slate-800/60 dark:to-slate-900 p-5 flex items-center justify-center overflow-hidden border-b border-slate-100 dark:border-slate-800 cursor-pointer"
+                    className="relative h-60 w-full bg-white dark:bg-slate-900 p-3 flex items-center justify-center overflow-hidden border-b border-slate-100 dark:border-slate-800 cursor-pointer"
                   >
                     <div className="absolute top-3.5 left-3.5 z-10">
                       <span className="inline-flex items-center gap-1.5 text-[10px] font-extrabold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white/95 dark:bg-slate-900/95 text-[#00758D] dark:text-[#6BCDB2] border border-slate-200/70 dark:border-slate-700 shadow-2xs">
@@ -126,7 +128,7 @@ export default function ServiciosSection({ onOpenQuote, onSelectProduct }) {
                       src={servImage}
                       alt={serv.title}
                       loading="lazy"
-                      className="w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-108"
+                      className="w-full h-full object-contain transition-transform duration-500 ease-out group-hover:scale-105"
                     />
                   </div>
 

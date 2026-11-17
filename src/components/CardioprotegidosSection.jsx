@@ -75,7 +75,7 @@ export default function CardioprotegidosSection({ onOpenQuote, onSelectProduct }
               ¿Qué incluye el Espacio Cardioprotegido? (5 Componentes Normativos)
             </span>
             <span className="text-[11px] font-bold text-slate-400 hidden sm:inline">
-              Garantía 12 Meses • Todo en Español
+              Garantía 12 Meses • Señalética Bilingüe ES / EN
             </span>
           </div>
 
@@ -95,11 +95,9 @@ export default function CardioprotegidosSection({ onOpenQuote, onSelectProduct }
                       warranty: "12 Meses",
                       microDesc: comp.desc,
                       pills: comp.pills,
-                      specs: (comp.pills || []).map((p, i) => ({
-                        label: `Atributo 0${i + 1}`,
-                        value: p
-                      })),
-                      accessories: [comp.titulo]
+                      specs: comp.specs || (comp.pills || []).map((p, i) => ({ label: `Atributo 0${i + 1}`, value: p })),
+                      accessories: comp.accessories || [comp.titulo],
+                      invimaReg: "Registro Sanitario Vigente"
                     })
                   }
                   className="group p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 hover:border-[#00758D] shadow-2xs hover:shadow-md transition-all cursor-pointer flex items-center gap-3"

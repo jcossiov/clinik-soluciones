@@ -46,7 +46,7 @@ export default function Footer({
               </div>
               <div className="flex items-center gap-2">
                 <PhoneCall className="w-3.5 h-3.5 text-[#00758D] dark:text-[#6BCDB2]" />
-                <a href="tel:+573002511990" className="hover:text-slate-900 dark:hover:text-white font-semibold">
+                <a href="tel:+573002511994" className="hover:text-slate-900 dark:hover:text-white font-semibold">
                   WhatsApp / Tel: {COMPANY_INFO.phoneDisplay}
                 </a>
               </div>

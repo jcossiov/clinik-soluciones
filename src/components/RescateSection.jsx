@@ -10,13 +10,13 @@ import { RESCATE_PRODUCTS, RESCATE_CATEGORIES, SPECIAL_REQUEST_BANNER } from "..
 import { buildWhatsAppQuoteUrl } from "../utils/whatsapp";
 
 export default function RescateSection({ onSelectProduct, onOpenQuote }) {
-  const [selectedCategory, setSelectedCategory] = useState("todos-rescate");
+  const [selectedCategory, setSelectedCategory] = useState("todos");
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredProducts = useMemo(() => {
     return RESCATE_PRODUCTS.filter((p) => {
       const matchesCategory =
-        selectedCategory === "todos-rescate" || p.category === selectedCategory;
+        selectedCategory === "todos" || p.category === selectedCategory;
       const matchesSearch =
         p.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (p.microDesc && p.microDesc.toLowerCase().includes(searchQuery.toLowerCase())) ||

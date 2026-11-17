@@ -1,7 +1,7 @@
 // =========================================================================
 // CLINIK SOLUCIONES COLOMBIA S.A.S. — ORQUESTADOR MODULAR DE DATOS Y CONTENIDO
 // Arquitectura Modular Versionada: COPY-v2.2 | DATA-v2.1 | UI-AWWWARDS-v2.3
-// Tel: +57 300 251 1990 | ventas@cliniksoluciones.com
+// Tel: +57 300 251 1994 | ventas@cliniksoluciones.com
 // =========================================================================
 
 export { VERSION_REGISTRY } from "./versionRegistry";
@@ -49,48 +49,48 @@ export const HOSPITAL_CLIENTS = [
       { name: "COLEGIO THE COLUMBUS SCHOOL", badge: "Educación Internacional" },
       { name: "METROPARQUES", badge: "Parques Recreativos Medellín" },
       { name: "UNIVERSIDAD NACIONAL DE COLOMBIA", badge: "Educación Superior" },
-      { name: "Argos S.A.", badge: "Industria Cementera" },
-      { name: "Fábrica de Licores de Antioquia (FLA)", badge: "Empresa Departamental" },
-      { name: "Colcafé / Zenú / Noel", badge: "Producción Alimentaria" },
-      { name: "Grupo Familia (Essity)", badge: "Cuidado Personal" },
-      { name: "Colanta", badge: "Sector Lácteo Nacional" }
+      { name: "ARGOS S.A.", badge: "Industria Cementera" },
+      { name: "FÁBRICA DE LICORES DE ANTIOQUIA (FLA)", badge: "Empresa Departamental" },
+      { name: "COLCAFÉ / ZENÚ / NOEL", badge: "Producción Alimentaria" },
+      { name: "GRUPO FAMILIA (ESSITY)", badge: "Cuidado Personal" },
+      { name: "COLANTA", badge: "Sector Lácteo Nacional" }
     ]
   },
   {
     category: "Sector Salud y Hospitalario",
     clients: [
-      { name: "Metrosalud E.S.E.", badge: "Red Pública Hospitalaria" },
-      { name: "Cedimed Diagnóstico Médico", badge: "Imágenes y Diagnóstico" },
-      { name: "Clínica Soma", badge: "Clínica de Alta Complejidad" },
-      { name: "Clínica Panamericana Urabá", badge: "Especialidades Médicas" },
-      { name: "Auna Salud", badge: "Red Asistencial Integral" },
-      { name: "Respirar IPS", badge: "Cuidado Respiratorio" },
-      { name: "Mebi Diagnóstico", badge: "Medicina Especializada" },
-      { name: "CEM Salud", badge: "Centros Médicos Especializados" }
+      { name: "METROSALUD E.S.E.", badge: "Red Pública Hospitalaria" },
+      { name: "CEDIMED DIAGNÓSTICO MÉDICO", badge: "Imágenes y Diagnóstico" },
+      { name: "CLÍNICA SOMA", badge: "Clínica de Alta Complejidad" },
+      { name: "CLÍNICA PANAMERICANA URABÁ", badge: "Especialidades Médicas" },
+      { name: "AUNA SALUD", badge: "Red Asistencial Integral" },
+      { name: "RESPIRAR IPS", badge: "Cuidado Respiratorio" },
+      { name: "MEBI DIAGNÓSTICO", badge: "Medicina Especializada" },
+      { name: "CEM SALUD", badge: "Centros Médicos Especializados" }
     ]
   },
   {
     category: "Organismos de Socorro y Ambulancias TAB/TAM",
     clients: [
-      { name: "Cuerpo de Bomberos Voluntarios Sabaneta", badge: "Atención Prehospitalaria" },
-      { name: "Cuerpo de Bomberos Voluntarios La Estrella", badge: "Rescate y Atención" },
-      { name: "Cuerpo de Bomberos Itagüí", badge: "Respuesta a Emergencias" },
-      { name: "Cuerpo de Bomberos Envigado", badge: "Protección Ciudadana" },
-      { name: "Cuerpo de Bomberos Rionegro", badge: "Emergencias Oriente" },
-      { name: "ESPADES Gestión del Riesgo", badge: "Gestión de Desastres" }
+      { name: "CUERPO DE BOMBEROS VOLUNTARIOS SABANETA", badge: "Atención Prehospitalaria" },
+      { name: "CUERPO DE BOMBEROS VOLUNTARIOS LA ESTRELLA", badge: "Rescate y Atención" },
+      { name: "CUERPO DE BOMBEROS ITAGÜÍ", badge: "Respuesta a Emergencias" },
+      { name: "CUERPO DE BOMBEROS ENVIGADO", badge: "Protección Ciudadana" },
+      { name: "CUERPO DE BOMBEROS RIONEGRO", badge: "Emergencias Oriente" },
+      { name: "ESPADES GESTIÓN DEL RIESGO", badge: "Gestión de Desastres" }
     ]
   },
   {
     category: "Educación, Centros Comerciales y Turismo",
     clients: [
-      { name: "Universidad CES", badge: "Facultad de Medicina" },
-      { name: "SENA Regional Antioquia", badge: "Formación Técnica" },
-      { name: "Universidad Católica Luis Amigó", badge: "Sedes Nacionales" },
-      { name: "Plaza Mayor Medellín", badge: "Centro de Convenciones" },
-      { name: "Centro Comercial Santafé Medellín", badge: "Gran Superficie" },
-      { name: "Centro Comercial San Diego / Los Molinos", badge: "Centros Comerciales" },
-      { name: "Parque Explora", badge: "Museo de Ciencias" },
-      { name: "Hoteles Holiday Inn / Poblado Coveñas", badge: "Sector Hotelero" }
+      { name: "UNIVERSIDAD CES", badge: "Facultad de Medicina" },
+      { name: "SENA REGIONAL ANTIOQUIA", badge: "Formación Técnica" },
+      { name: "UNIVERSIDAD CATÓLICA LUIS AMIGÓ", badge: "Sedes Nacionales" },
+      { name: "PLAZA MAYOR MEDELLÍN", badge: "Centro de Convenciones" },
+      { name: "CENTRO COMERCIAL SANTAFÉ MEDELLÍN", badge: "Gran Superficie" },
+      { name: "CENTRO COMERCIAL SAN DIEGO / LOS MOLINOS", badge: "Centros Comerciales" },
+      { name: "PARQUE EXPLORA", badge: "Museo de Ciencias" },
+      { name: "HOTELES HOLIDAY INN / POBLADO COVEÑAS", badge: "Sector Hotelero" }
     ]
   }
 ];

@@ -14,13 +14,13 @@ import {
 import { buildWhatsAppQuoteUrl } from "../utils/whatsapp";
 
 export default function SimulacionSection({ onOpenQuote, onSelectProduct }) {
-  const [selectedCategory, setSelectedCategory] = useState("todos-sim");
+  const [selectedCategory, setSelectedCategory] = useState("todos");
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredSimulators = useMemo(() => {
     return SIMULATION_PRODUCTS.filter((sim) => {
       const matchesCat =
-        selectedCategory === "todos-sim" || sim.category === selectedCategory;
+        selectedCategory === "todos" || sim.category === selectedCategory;
       const matchesSearch =
         sim.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (sim.desc && sim.desc.toLowerCase().includes(searchQuery.toLowerCase())) ||

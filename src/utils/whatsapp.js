@@ -1,10 +1,10 @@
 /**
  * VORTEX Labs — Motor Conversacional WhatsApp para CliniK Soluciones Colombia S.A.S.
- * Conexión directa al Canal Oficial (+57 300 251 1990 | ventas@cliniksoluciones.com)
+ * Conexión directa al Canal Oficial (+57 300 251 1994 | ventas@cliniksoluciones.com)
  * Arquitectura Modular: COPY-v2.2 | DATA-v2.1
  */
 
-export const OFFICIAL_WHATSAPP_NUMBER = "573002511990";
+export const OFFICIAL_WHATSAPP_NUMBER = "573002511994";
 export const OFFICIAL_SALES_EMAIL = "ventas@cliniksoluciones.com";
 
 export function buildWhatsAppQuoteUrl({

@@ -14,13 +14,13 @@ import {
 import { buildWhatsAppQuoteUrl } from "../utils/whatsapp";
 
 export default function AccesoriosSection({ onOpenQuote, onSelectProduct }) {
-  const [selectedCategory, setSelectedCategory] = useState("todos-acc");
+  const [selectedCategory, setSelectedCategory] = useState("todos");
   const [searchQuery, setSearchQuery] = useState("");
 
   const filteredAccessories = useMemo(() => {
     return ACCESSORIES_CATALOG.filter((acc) => {
       const matchesCat =
-        selectedCategory === "todos-acc" || acc.category === selectedCategory;
+        selectedCategory === "todos" || acc.category === selectedCategory;
       const matchesSearch =
         acc.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
         (acc.equipmentFor && acc.equipmentFor.toLowerCase().includes(searchQuery.toLowerCase())) ||

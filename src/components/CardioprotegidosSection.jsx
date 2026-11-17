@@ -97,7 +97,7 @@ export default function CardioprotegidosSection({ onOpenQuote, onSelectProduct }
                       pills: comp.pills,
                       specs: comp.specs || (comp.pills || []).map((p, i) => ({ label: `Atributo 0${i + 1}`, value: p })),
                       accessories: comp.accessories || [comp.titulo],
-                      invimaReg: "Registro Sanitario Vigente"
+                      invimaReg: "INVIMA Vigente"
                     })
                   }
                   className="group p-3.5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200/80 dark:border-slate-800 hover:border-[#00758D] shadow-2xs hover:shadow-md transition-all cursor-pointer flex items-center gap-3"
@@ -160,7 +160,7 @@ export default function CardioprotegidosSection({ onOpenQuote, onSelectProduct }
                 brand: pkg.brand,
                 sku: pkg.sku,
                 image: pkg.image,
-                invimaReg: pkg.invimaReg || "Registro Sanitario Vigente",
+                invimaReg: pkg.invimaReg || "INVIMA Vigente",
                 warranty: pkg.warranty || "12 Meses",
                 microDesc: pkg.shortDesc,
                 pills: pkg.highlights,

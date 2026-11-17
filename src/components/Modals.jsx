@@ -174,7 +174,7 @@ export default function Modals({
                   <div className="flex items-center gap-2">
                     <ShieldCheck className="w-4 h-4 text-[#69a53c]" />
                     <span className="text-[11px] font-mono text-slate-700 dark:text-slate-300">
-                      INVIMA: Registro Sanitario Vigente
+                      INVIMA Vigente
                     </span>
                   </div>
                   <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 dark:bg-emerald-950/60 px-2 py-0.5 rounded">

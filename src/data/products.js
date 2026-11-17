@@ -138,7 +138,7 @@ export const INITIAL_KANBAN_TICKETS = [
     status: "certified",
     date: "2026-10-22",
     technician: "Ing. Biomédico Carlos Mario Restrepo",
-    invimaReg: "2020EBC-0021540",
+    invimaReg: "INVIMA Vigente",
     batteryLevel: 98,
     progress: 100
   },
@@ -151,7 +151,7 @@ export const INITIAL_KANBAN_TICKETS = [
     status: "in-progress",
     date: "2026-10-23",
     technician: "Ing. Biomédica Laura Gómez",
-    invimaReg: "2020EBC-0021540",
+    invimaReg: "INVIMA Vigente",
     batteryLevel: 96,
     progress: 70
   },
@@ -164,7 +164,7 @@ export const INITIAL_KANBAN_TICKETS = [
     status: "in-progress",
     date: "2026-10-23",
     technician: "Ing. Biomédico Santiago Vélez",
-    invimaReg: "Múltiples registros INVIMA vigentes",
+    invimaReg: "INVIMA Vigente",
     batteryLevel: 100,
     progress: 80
   },
@@ -177,7 +177,7 @@ export const INITIAL_KANBAN_TICKETS = [
     status: "pending",
     date: "2026-10-24",
     technician: "Ing. Biomédico Carlos Restrepo",
-    invimaReg: "2019EBC-0019482",
+    invimaReg: "INVIMA Vigente",
     batteryLevel: 92,
     progress: 20
   },
@@ -190,7 +190,7 @@ export const INITIAL_KANBAN_TICKETS = [
     status: "pending",
     date: "2026-10-25",
     technician: "Especialista Biomédico CliniK",
-    invimaReg: "2021EBC-0023810",
+    invimaReg: "INVIMA Vigente",
     batteryLevel: 99,
     progress: 0
   }
